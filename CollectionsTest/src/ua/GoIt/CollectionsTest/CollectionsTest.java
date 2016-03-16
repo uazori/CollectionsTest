@@ -4,9 +4,6 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
 
 /**
  * Created by Vadim on 11.03.2016.
@@ -36,7 +33,7 @@ public class CollectionsTest {
     }
 
 
-    public void makeTest(int volume){
+    public void makeTest(int volume,int testCount){
 
 
 
@@ -44,10 +41,10 @@ public class CollectionsTest {
             printHeader(volume);
 
 
-            makeArrayListTest(volume);
-            makeLinkedListTest(volume);
-            makeHashSetTest(volume);
-            makeTreeSetTest(volume);
+            printToFileArrayListTest(volume,testCount);
+            printToFileLinkedListTest(volume,testCount);
+            printToFileHashSetTest(volume,testCount);
+            printToFileTreeSetTest(volume,testCount);
 
 
             bufferedWriter.write("\n");
@@ -60,11 +57,11 @@ public class CollectionsTest {
 
     }
 
-    private void makeArrayListTest(int volume) throws IOException {
+    private void printToFileArrayListTest(int volume,int testCount) throws IOException {
 
 
 
-            TestArrayList testArrayList = new TestArrayList(volume);
+            TestArrayList testArrayList = new TestArrayList(volume,testCount);
             bufferedWriter.write(String.format("| %10s | %10d | %10d | %10d | %10d | %10d | %15d | %15d |\r\n",
                     "ArrayList",
                     testArrayList.testAdd(),
@@ -82,11 +79,11 @@ public class CollectionsTest {
 
 
     }
-    private void makeLinkedListTest(int volume) throws IOException {
+    private void printToFileLinkedListTest(int volume, int testCount) throws IOException {
 
 
 
-            TestLinkedList testLinkedList = new TestLinkedList(volume);
+            TestLinkedList testLinkedList = new TestLinkedList(volume,testCount);
             bufferedWriter.write(String.format("| %10s | %10d | %10d | %10d | %10d | %10d | %15d | %15d |\r\n",
                     "LinkedList",
                     testLinkedList.testAdd(),
@@ -105,8 +102,8 @@ public class CollectionsTest {
 
     }
 
-    private void makeHashSetTest(int volume) throws IOException {
-        TestHashSet testHashSet = new TestHashSet(volume);
+    private void printToFileHashSetTest(int volume, int testCount) throws IOException {
+        TestHashSet testHashSet = new TestHashSet(volume,testCount);
         bufferedWriter.write(String.format("| %10s | %10d | %10s | %10d | %10d | %10d | %15s | %15s |\r\n",
                 "HashSet",
                 testHashSet.testAdd(),
@@ -122,8 +119,8 @@ public class CollectionsTest {
 
     }
 
-    private void makeTreeSetTest(int volume) throws IOException {
-        TestTreeSet testHashSet = new TestTreeSet(volume);
+    private void printToFileTreeSetTest(int volume,int testCount) throws IOException {
+        TestTreeSet testHashSet = new TestTreeSet(volume,testCount);
         bufferedWriter.write(String.format("| %10s | %10d | %10s | %10d | %10d | %10d | %15s | %15s |\r\n",
                 "TreeSet",
                 testHashSet.testAdd(),
@@ -153,7 +150,7 @@ public class CollectionsTest {
 
     }
 
-    public void printTable(){
+    public void printTableFromFile(){
 
         Path pathToFile = Paths.get(path);
 

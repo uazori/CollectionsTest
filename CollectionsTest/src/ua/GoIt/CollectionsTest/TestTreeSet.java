@@ -9,10 +9,13 @@ public class TestTreeSet {
    TreeSet<Integer> data = new TreeSet<Integer>();
     Random generator = new Random();
     int volume;
+    int testCount;
 
 
-    public TestTreeSet(int volume) {
-        this.volume=volume;
+    public TestTreeSet(int volume,int testCount) {
+
+        this.volume = volume;
+        this.testCount = testCount;
 
         for (int i = 0; i < volume; i++) {
 
@@ -23,59 +26,87 @@ public class TestTreeSet {
 
     }
 
-    public long testAdd(){
-        int i = generator.nextInt(Integer.MAX_VALUE);
+    public long testAdd() {
 
 
-        long start =System.currentTimeMillis();
-        data.add(i);
+
+        long start = System.currentTimeMillis();
+
+        for (int j = 0; j < testCount; j++) {
+            data.add(j);
+        }
+
         long end = System.currentTimeMillis();
 
-        long result=end-start;
-        return result;}
+        long result = (end - start) / testCount;
+        return result;
+    }
 
 
 
-    public long testRemove(){
-        int i = generator.nextInt(Integer.MAX_VALUE);
+    public long testRemove() {
 
-        long start =System.currentTimeMillis();
-        data.remove(i);
+
+        long start = System.currentTimeMillis();
+
+        for (int j = 0; j < testCount; j++) {
+            data.remove(j);
+        }
+
         long end = System.currentTimeMillis();
 
-        long result=end-start;
-        return result;}
-
-    public long testContains(){
-        int value =generator.nextInt(Integer.MAX_VALUE);
-
-        long start =System.currentTimeMillis();
-        data.contains(value);
-        long end = System.currentTimeMillis();
-
-        long result=end-start;
-        return result;}
-
-    public long testPopulate(){
+        long result = (end - start)/testCount;
 
 
-        List<Integer> dataPopulate = new ArrayList<Integer>();
+        return result;
+    }
 
 
+    public long testContains() {
+        long result = 0;
+        long start;
+        long end;
 
-        long start =System.currentTimeMillis();
 
-        for (int i = 0; i < volume; i++) {
+        for (int i = 0; i < testCount; i++) {
 
-            dataPopulate.add(123);
+            int value = generator.nextInt(Integer.MAX_VALUE);
+
+            start = System.currentTimeMillis();
+            data.contains(value);
+            end = System.currentTimeMillis();
+
+            result+=(end - start);
 
         }
 
 
+        return result/testCount;
+    }
+
+    public long testPopulate() {
+
+
+
+
+
+        long start = System.currentTimeMillis();
+
+        for (int i = 0; i < testCount; i++) {
+            List<Integer> dataPopulate = new ArrayList<Integer>();
+
+            for (int j = 0; j < volume; j++) {
+
+                dataPopulate.add(i);
+
+            }
+
+        }
 
         long end = System.currentTimeMillis();
 
-        long result=end-start;
-        return result;}
+        long result = (end - start) / testCount;
+        return result;
+    }
 
 }

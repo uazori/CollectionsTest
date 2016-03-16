@@ -1,8 +1,6 @@
 package ua.GoIt.CollectionsTest;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 /**
  * Created by Vadim on 11.03.2016.
@@ -12,10 +10,12 @@ public class TestArrayList {
     List<Integer> data = new ArrayList<Integer>();
     Random generator = new Random();
     int volume;
+    int testCount;
 
 
-    public TestArrayList(int volume) {
-        this.volume=volume;
+    public TestArrayList(int volume,int testCount) {
+        this.testCount = testCount;
+        this.volume = volume;
 
         for (int i = 0; i < volume; i++) {
 
@@ -26,83 +26,129 @@ public class TestArrayList {
 
     }
 
-    public long testAdd(){
+    public long testAdd() {
         int i = generator.nextInt(Integer.MAX_VALUE);
 
 
-        long start =System.currentTimeMillis();
-        data.add(i);
+        long start = System.currentTimeMillis();
+
+        for (int j = 0; j < testCount; j++) {
+            data.add(i);
+        }
+
         long end = System.currentTimeMillis();
 
-        long result=end-start;
-        return result;}
+        long result = (end - start) / testCount;
+        return result;
+    }
 
-    public long testGet(){
+    public long testGet() {
 
         int i = generator.nextInt(data.size());
 
-        long start =System.currentTimeMillis();
-        data.get(i);
+        long start = System.currentTimeMillis();
+        for (int j = 0; j < testCount; j++) {
+            data.get(i);
+        }
+
         long end = System.currentTimeMillis();
 
 
-        long result=end-start;
-        return result;}
+        long result = (end - start)/testCount;
+        return result;
+    }
 
-    public long testRemove(){
+    public long testRemove() {
         int i = generator.nextInt(data.size());
 
-        long start =System.currentTimeMillis();
-        data.remove(i);
+        long start = System.currentTimeMillis();
+        for (int j = 0; j < testCount; j++) {
+            data.remove(i);
+        }
+
         long end = System.currentTimeMillis();
 
-        long result=end-start;
-        return result;}
+        long result = (end - start)/testCount;
+        return result;
+    }
 
-    public long testContains(){
-        int value =generator.nextInt(Integer.MAX_VALUE);
+    public long testContains() {
+        int value = generator.nextInt(Integer.MAX_VALUE);
 
-        long start =System.currentTimeMillis();
-        data.contains(value);
+        long start = System.currentTimeMillis();
+        for (int i = 0; i < testCount; i++) {
+            data.contains(value);
+        }
+
         long end = System.currentTimeMillis();
 
-        long result=end-start;
-        return result;}
+        long result = (end - start)/testCount;
+        return result;
+    }
 
-    public long testPopulate(){
-
-
-        List<Integer> dataPopulate = new ArrayList<Integer>();
+    public long testPopulate() {
 
 
 
-        long start =System.currentTimeMillis();
 
-            for (int i = 0; i < volume; i++) {
 
-                dataPopulate.add(123);
+        long start = System.currentTimeMillis();
+
+        for (int i = 0; i < testCount; i++) {
+            List<Integer> dataPopulate = new ArrayList<Integer>();
+
+            for (int j = 0; j < volume; j++) {
+
+                dataPopulate.add(i);
 
             }
 
+        }
+
+        long end = System.currentTimeMillis();
+
+        long result = (end - start) / testCount;
+        return result;
+    }
+
+    public long testIteratorAdd() {
+
+        long start = System.currentTimeMillis();
+
+        for (int i = 0; i < testCount; i++) {
+
+            List<Integer> dataPopulate = new ArrayList<Integer>();
+            ListIterator iterator = dataPopulate.listIterator();
+
+
+            for (int j = 0; j < volume; j++) {
+
+                iterator.add(j);
+
+            }
+
+        }
+
+        long end = System.currentTimeMillis();
+        long result = (end - start) /testCount ;
+        return result;
+    }
+
+    public long testIteratorRemove() {
+        Iterator iterator = data.iterator();
+        long start = System.currentTimeMillis();
+
+        while (iterator.hasNext()){
+
+            iterator.next();
+            iterator.remove();
+
+        }
 
 
         long end = System.currentTimeMillis();
-
-        long result=end-start;
-        return result;}
-
-    public long testIteratorAdd(){
-
-        long start =System.currentTimeMillis();
-
-        long end = System.currentTimeMillis();
-        long result=end-start;
-        return result;}
-
-    public long testIteratorRemove(){
-        long start =System.currentTimeMillis();
-        long end = System.currentTimeMillis();
-        long result=end-start;
-        return result;}
+        long result = end - start;
+        return result;
+    }
 
 }
