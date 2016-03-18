@@ -6,12 +6,13 @@ public class Main {
 
 
             CollectionsTest test = new CollectionsTest();
-        int testsCount =4;
-            test.makeTest(10000,testsCount);
-            test.makeTest(100000,testsCount);
-            test.makeTest(1000000,testsCount);
+        int testsCount =5;
+        int volume = 10000;
+        test.makeTest(volume,testsCount);
+        test.makeTest(100000,testsCount);
+        test.makeTest(1000000,testsCount);
 
-            test.printTableFromFile();
+        test.printTableFromFile();
 
 
     }

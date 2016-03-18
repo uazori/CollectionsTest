@@ -8,6 +8,7 @@ import java.util.*;
 public class TestTreeSet {
    TreeSet<Integer> data = new TreeSet<Integer>();
     Random generator = new Random();
+    TreeSet<Integer> dataPopulate = new TreeSet<>();
     int volume;
     int testCount;
 
@@ -29,56 +30,91 @@ public class TestTreeSet {
     public long testAdd() {
 
 
+        List<Long> timeAdd = new ArrayList<Long>();
 
-        long start = System.currentTimeMillis();
+
 
         for (int j = 0; j < testCount; j++) {
-            data.add(j);
+
+
+            long start = System.currentTimeMillis();
+
+            for (int k = 0; k < volume; k++) {
+                data.add(k);
+            }
+
+            long end = System.currentTimeMillis();
+
+            timeAdd.add((end - start));
         }
 
-        long end = System.currentTimeMillis();
+        long result=0;
 
-        long result = (end - start) / testCount;
-        return result;
+        for (Long aLong : timeAdd) {
+            result+= aLong;
+        }
+
+
+
+        return result/testCount;
     }
 
-
-
     public long testRemove() {
+        List<Long> timeAdd = new ArrayList<Long>();
 
 
-        long start = System.currentTimeMillis();
 
         for (int j = 0; j < testCount; j++) {
-            data.remove(j);
+
+            long start = System.currentTimeMillis();
+
+            for (int k = 0; k < volume; k++) {
+                data.remove(k);
+            }
+
+            long end = System.currentTimeMillis();
+
+            timeAdd.add((end - start));
         }
 
-        long end = System.currentTimeMillis();
+        long result=0;
 
-        long result = (end - start)/testCount;
+        for (Long aLong : timeAdd) {
+            result+= aLong;
+        }
 
 
-        return result;
+
+        return result/testCount;
     }
 
 
     public long testContains() {
-        long result = 0;
-        long start;
-        long end;
 
 
-        for (int i = 0; i < testCount; i++) {
+        List<Long> timeAdd = new ArrayList<Long>();
 
-            int value = generator.nextInt(Integer.MAX_VALUE);
 
-            start = System.currentTimeMillis();
-            data.contains(value);
-            end = System.currentTimeMillis();
 
-            result+=(end - start);
+        for (int j = 0; j < testCount; j++) {
 
+            long start = System.currentTimeMillis();
+
+            for (int k = 0; k < volume; k++) {
+                data.contains(k);
+            }
+
+            long end = System.currentTimeMillis();
+
+            timeAdd.add((end - start));
         }
+
+        long result=0;
+
+        for (Long aLong : timeAdd) {
+            result+= aLong;
+        }
+
 
 
         return result/testCount;
@@ -86,27 +122,34 @@ public class TestTreeSet {
 
     public long testPopulate() {
 
+        List<Long> timeAdd = new ArrayList<Long>();
 
 
 
 
-        long start = System.currentTimeMillis();
 
         for (int i = 0; i < testCount; i++) {
-            List<Integer> dataPopulate = new ArrayList<Integer>();
+
+
+            long start = System.currentTimeMillis();
 
             for (int j = 0; j < volume; j++) {
 
                 dataPopulate.add(i);
 
             }
+            long end = System.currentTimeMillis();
+            timeAdd.add((end - start));
 
         }
 
-        long end = System.currentTimeMillis();
+        long result=0;
 
-        long result = (end - start) / testCount;
-        return result;
+        for (Long aLong : timeAdd) {
+            result+= aLong;
+        }
+
+        return result/testCount;
     }
 
 }

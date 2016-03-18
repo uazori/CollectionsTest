@@ -8,6 +8,7 @@ import java.util.*;
 public class TestLinkedList {
     LinkedList<Integer> data = new LinkedList<Integer>();
     Random generator = new Random();
+    LinkedList<Integer> dataPopulate = new LinkedList<>();
     int volume;
     int testCount;
 
@@ -26,127 +27,219 @@ public class TestLinkedList {
     }
 
     public long testAdd() {
-        int i = generator.nextInt(Integer.MAX_VALUE);
 
 
-        long start = System.currentTimeMillis();
+        List<Long> timeAdd = new ArrayList<Long>();
+
+
 
         for (int j = 0; j < testCount; j++) {
-            data.add(i);
+
+
+            long start = System.currentTimeMillis();
+
+            for (int k = 0; k < volume; k++) {
+                data.add(k);
+            }
+
+            long end = System.currentTimeMillis();
+
+            timeAdd.add((end - start));
         }
 
-        long end = System.currentTimeMillis();
+        long result=0;
 
-        long result = (end - start) / testCount;
-        return result;
+        for (Long aLong : timeAdd) {
+            result+= aLong;
+        }
+
+
+
+        return result/testCount;
     }
 
     public long testGet() {
 
-        int i = generator.nextInt(data.size());
+        List<Long> timeAdd = new ArrayList<Long>();
 
-        long start = System.currentTimeMillis();
+
+
         for (int j = 0; j < testCount; j++) {
-            data.get(i);
+
+            long start = System.currentTimeMillis();
+
+            for (int k = 0; k < volume; k++) {
+                data.get(k);
+            }
+
+            long end = System.currentTimeMillis();
+
+            timeAdd.add((end - start));
         }
 
-        long end = System.currentTimeMillis();
+        long result=0;
+
+        for (Long aLong : timeAdd) {
+            result+= aLong;
+        }
 
 
-        long result = (end - start)/testCount;
-        return result;
+
+        return result/testCount;
     }
 
     public long testRemove() {
-        int i = generator.nextInt(data.size());
+        List<Long> timeAdd = new ArrayList<Long>();
 
-        long start = System.currentTimeMillis();
+
+
         for (int j = 0; j < testCount; j++) {
-            data.remove(i);
+
+            long start = System.currentTimeMillis();
+
+            for (int k = 0; k < volume; k++) {
+                data.remove(k);
+            }
+
+            long end = System.currentTimeMillis();
+
+            timeAdd.add((end - start));
         }
 
-        long end = System.currentTimeMillis();
+        long result=0;
 
-        long result = (end - start)/testCount;
-        return result;
+        for (Long aLong : timeAdd) {
+            result+= aLong;
+        }
+
+
+
+        return result/testCount;
     }
 
     public long testContains() {
-        int value = generator.nextInt(Integer.MAX_VALUE);
 
-        long start = System.currentTimeMillis();
-        for (int i = 0; i < testCount; i++) {
-            data.contains(value);
+
+        List<Long> timeAdd = new ArrayList<Long>();
+
+
+
+        for (int j = 0; j < testCount; j++) {
+
+            long start = System.currentTimeMillis();
+
+            for (int k = 0; k < volume; k++) {
+                data.contains(k);
+            }
+
+            long end = System.currentTimeMillis();
+
+            timeAdd.add((end - start));
         }
 
-        long end = System.currentTimeMillis();
+        long result=0;
 
-        long result = (end - start)/testCount;
-        return result;
+        for (Long aLong : timeAdd) {
+            result+= aLong;
+        }
+
+
+
+        return result/testCount;
     }
 
     public long testPopulate() {
 
+        List<Long> timeAdd = new ArrayList<Long>();
 
 
 
 
-        long start = System.currentTimeMillis();
 
         for (int i = 0; i < testCount; i++) {
-            List<Integer> dataPopulate = new ArrayList<Integer>();
+
+
+            long start = System.currentTimeMillis();
 
             for (int j = 0; j < volume; j++) {
 
                 dataPopulate.add(i);
 
             }
+            long end = System.currentTimeMillis();
+            timeAdd.add((end - start));
 
         }
 
-        long end = System.currentTimeMillis();
+        long result=0;
 
-        long result = (end - start) / testCount;
-        return result;
+        for (Long aLong : timeAdd) {
+            result+= aLong;
+        }
+
+        return result/testCount;
     }
 
-    public long testIteratorAdd() {
 
-        long start = System.currentTimeMillis();
+    public long testIteratorAdd() {
+        List<Long> timeAdd = new ArrayList<Long>();
+
 
         for (int i = 0; i < testCount; i++) {
 
-            List<Integer> dataPopulate = new ArrayList<Integer>();
+
             ListIterator iterator = dataPopulate.listIterator();
 
-
+            long start = System.currentTimeMillis();
             for (int j = 0; j < volume; j++) {
 
                 iterator.add(j);
 
             }
+            long end = System.currentTimeMillis();
+            timeAdd.add((end - start));
 
         }
 
-        long end = System.currentTimeMillis();
-        long result = (end - start) /testCount ;
-        return result;
+        long result=0;
+
+        for (Long aLong : timeAdd) {
+            result+= aLong;
+        }
+
+        return result/testCount;
     }
 
     public long testIteratorRemove() {
-        Iterator iterator = data.iterator();
-        long start = System.currentTimeMillis();
 
-        while (iterator.hasNext()){
+        List<Long> timeAdd = new ArrayList<Long>();
 
-            iterator.next();
-            iterator.remove();
+
+        for (int i = 0; i < testCount; i++) {
+
+
+            ListIterator iterator = dataPopulate.listIterator();
+
+            long start = System.currentTimeMillis();
+
+            while(iterator.hasNext()){
+
+                iterator.next();
+                iterator.remove();
+
+            }
+
+            long end = System.currentTimeMillis();
+            timeAdd.add((end - start));
 
         }
 
+        long result=0;
 
-        long end = System.currentTimeMillis();
-        long result = end - start;
-        return result;
+        for (Long aLong : timeAdd) {
+            result+= aLong;
+        }
+
+        return result/testCount;
     }
 }

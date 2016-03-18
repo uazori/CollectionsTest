@@ -23,21 +23,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="file.txt" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="file.txt" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/result/file.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="714">
-              <caret line="31" column="77" selection-start-line="31" selection-start-column="77" selection-end-line="31" selection-end-column="77" />
+            <state vertical-scroll-proportion="0.5976331" vertical-offset="223" max-vertical-offset="561">
+              <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26984128" vertical-offset="0" max-vertical-offset="504">
-              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -46,9 +46,34 @@
       <file leaf-file-name="CollectionsTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ua/GoIt/CollectionsTest/CollectionsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1838" max-vertical-offset="2941">
-              <caret line="122" column="66" selection-start-line="122" selection-start-column="66" selection-end-line="122" selection-end-column="66" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="2941">
+              <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestArrayList.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ua/GoIt/CollectionsTest/TestArrayList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="867">
+              <caret line="181" column="5" selection-start-line="120" selection-start-column="4" selection-end-line="181" selection-end-column="5" />
+              <folding>
+                <element signature="method#testAdd#0;class#TestArrayList#0" expanded="false" />
+                <element signature="e#621#627#0" expanded="true" />
+                <element signature="method#testGet#0;class#TestArrayList#0" expanded="false" />
+                <element signature="e#1139#1145#0" expanded="true" />
+                <element signature="method#testRemove#0;class#TestArrayList#0" expanded="false" />
+                <element signature="e#1662#1668#0" expanded="true" />
+                <element signature="method#testContains#0;class#TestArrayList#0" expanded="false" />
+                <element signature="e#2192#2198#0" expanded="true" />
+                <element signature="method#testPopulate#0;class#TestArrayList#0" expanded="false" />
+                <element signature="e#2723#2729#0" expanded="true" />
+                <element signature="method#testIteratorAdd#0;class#TestArrayList#0" expanded="false" />
+                <element signature="e#3262#3268#0" expanded="true" />
+                <element signature="method#testIteratorRemove#0;class#TestArrayList#0" expanded="false" />
+                <element signature="e#3862#3868#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -56,13 +81,18 @@
       <file leaf-file-name="TestHashSet.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ua/GoIt/CollectionsTest/TestHashSet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="176" max-vertical-offset="1037">
-              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="16" max-vertical-offset="595">
+              <caret line="91" column="0" selection-start-line="30" selection-start-column="3" selection-end-line="154" selection-end-column="0" />
               <folding>
+                <element signature="method#TestHashSet#0;class#TestHashSet#0" expanded="false" />
+                <element signature="method#testAdd#0;class#TestHashSet#0" expanded="false" />
+                <element signature="e#619#625#0" expanded="true" />
                 <element signature="method#testRemove#0;class#TestHashSet#0" expanded="false" />
+                <element signature="e#1143#1149#0" expanded="true" />
                 <element signature="method#testContains#0;class#TestHashSet#0" expanded="false" />
+                <element signature="e#1674#1680#0" expanded="true" />
                 <element signature="method#testPopulate#0;class#TestHashSet#0" expanded="false" />
-                <element signature="e#1694#1703#0" expanded="true" />
+                <element signature="e#2205#2211#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -71,10 +101,16 @@
       <file leaf-file-name="TestTreeSet.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ua/GoIt/CollectionsTest/TestTreeSet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2006">
-              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
+              <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
               <folding>
-                <element signature="e#1694#1703#0" expanded="true" />
+                <element signature="method#testAdd#0;class#TestTreeSet#0" expanded="false" />
+                <element signature="e#618#624#0" expanded="true" />
+                <element signature="method#testRemove#0;class#TestTreeSet#0" expanded="false" />
+                <element signature="e#1142#1148#0" expanded="true" />
+                <element signature="method#testContains#0;class#TestTreeSet#0" expanded="false" />
+                <element signature="e#1673#1679#0" expanded="true" />
+                <element signature="e#2204#2210#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -96,20 +132,21 @@
         <option value="$PROJECT_DIR$/src/Generics/Citizen.java" />
         <option value="$PROJECT_DIR$/src/Generics/Main.java" />
         <option value="$PROJECT_DIR$/src/Generics/Person.java" />
-        <option value="$PROJECT_DIR$/src/ua/GoIt/CollectionsTest/TestArrayList.java" />
-        <option value="$PROJECT_DIR$/src/ua/GoIt/CollectionsTest/TestLinkedList.java" />
-        <option value="$PROJECT_DIR$/src/ua/GoIt/CollectionsTest/TestTreeSet.java" />
-        <option value="$PROJECT_DIR$/src/ua/GoIt/CollectionsTest/TestHashSet.java" />
         <option value="$PROJECT_DIR$/src/ua/GoIt/CollectionsTest/CollectionsTest.java" />
+        <option value="$PROJECT_DIR$/src/ua/GoIt/CollectionsTest/TestLinkedList.java" />
+        <option value="$PROJECT_DIR$/src/ua/GoIt/CollectionsTest/TestArrayList.java" />
+        <option value="$PROJECT_DIR$/src/ua/GoIt/CollectionsTest/TestHashSet.java" />
+        <option value="$PROJECT_DIR$/src/ua/GoIt/CollectionsTest/TestTreeSet.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/result/file.txt" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1358" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1696" />
-    <option name="height" value="1026" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -139,7 +176,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -182,30 +218,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CollectionsTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CollectionsTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CollectionsTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="result" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -487,12 +506,14 @@
       <workItem from="1457966643479" duration="2511000" />
       <workItem from="1457986328531" duration="3284000" />
       <workItem from="1458067103192" duration="692000" />
-      <workItem from="1458149792469" duration="6731000" />
+      <workItem from="1458149792469" duration="7025000" />
+      <workItem from="1458202519876" duration="102000" />
+      <workItem from="1458219528041" duration="11696000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17503000" />
+    <option name="totallyTimeSpent" value="29595000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -515,7 +536,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1696" height="1026" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -531,14 +552,14 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295838" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32845894" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295838" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.200489" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4015748" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20045386" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3970346" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -563,18 +584,158 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/result/file.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="714">
+          <caret line="31" column="77" selection-start-line="31" selection-start-column="77" selection-end-line="31" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="408">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/GoIt/CollectionsTest/CollectionsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2074" max-vertical-offset="2992">
+          <caret line="122" column="66" selection-start-line="122" selection-start-column="66" selection-end-line="122" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/GoIt/CollectionsTest/TestHashSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="402" max-vertical-offset="2023">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="method#TestHashSet#0;class#TestHashSet#0" expanded="false" />
+            <element signature="method#testAdd#0;class#TestHashSet#0" expanded="false" />
+            <element signature="e#619#625#0" expanded="true" />
+            <element signature="method#testRemove#0;class#TestHashSet#0" expanded="false" />
+            <element signature="e#1143#1149#0" expanded="true" />
+            <element signature="method#testContains#0;class#TestHashSet#0" expanded="false" />
+            <element signature="e#1674#1680#0" expanded="true" />
+            <element signature="method#testPopulate#0;class#TestHashSet#0" expanded="false" />
+            <element signature="e#2205#2211#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/GoIt/CollectionsTest/TestArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="411" max-vertical-offset="1870">
+          <caret line="33" column="0" selection-start-line="32" selection-start-column="7" selection-end-line="38" selection-end-column="46" />
+          <folding>
+            <element signature="method#testAdd#0;class#TestArrayList#0" expanded="false" />
+            <element signature="e#621#627#0" expanded="true" />
+            <element signature="method#testGet#0;class#TestArrayList#0" expanded="false" />
+            <element signature="e#1139#1145#0" expanded="true" />
+            <element signature="method#testRemove#0;class#TestArrayList#0" expanded="false" />
+            <element signature="e#1662#1668#0" expanded="true" />
+            <element signature="method#testContains#0;class#TestArrayList#0" expanded="false" />
+            <element signature="e#2192#2198#0" expanded="true" />
+            <element signature="method#testPopulate#0;class#TestArrayList#0" expanded="false" />
+            <element signature="e#2723#2729#0" expanded="true" />
+            <element signature="method#testIteratorAdd#0;class#TestArrayList#0" expanded="false" />
+            <element signature="e#3262#3268#0" expanded="true" />
+            <element signature="method#testIteratorRemove#0;class#TestArrayList#0" expanded="false" />
+            <element signature="e#3862#3868#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/GoIt/CollectionsTest/TestTreeSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="782" max-vertical-offset="2006">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="method#testAdd#0;class#TestTreeSet#0" expanded="false" />
+            <element signature="e#618#624#0" expanded="true" />
+            <element signature="method#testRemove#0;class#TestTreeSet#0" expanded="false" />
+            <element signature="e#1142#1148#0" expanded="true" />
+            <element signature="method#testContains#0;class#TestTreeSet#0" expanded="false" />
+            <element signature="e#1673#1679#0" expanded="true" />
+            <element signature="e#2204#2210#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/result/file.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="714">
+          <caret line="31" column="77" selection-start-line="31" selection-start-column="77" selection-end-line="31" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="408">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/GoIt/CollectionsTest/CollectionsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2074" max-vertical-offset="2992">
+          <caret line="122" column="66" selection-start-line="122" selection-start-column="66" selection-end-line="122" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/GoIt/CollectionsTest/TestHashSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="2023">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="method#TestHashSet#0;class#TestHashSet#0" expanded="false" />
+            <element signature="method#testAdd#0;class#TestHashSet#0" expanded="false" />
+            <element signature="e#619#625#0" expanded="true" />
+            <element signature="method#testRemove#0;class#TestHashSet#0" expanded="false" />
+            <element signature="e#1143#1149#0" expanded="true" />
+            <element signature="method#testContains#0;class#TestHashSet#0" expanded="false" />
+            <element signature="e#1674#1680#0" expanded="true" />
+            <element signature="method#testPopulate#0;class#TestHashSet#0" expanded="false" />
+            <element signature="e#2205#2211#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/GoIt/CollectionsTest/TestTreeSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="782" max-vertical-offset="2006">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="method#testAdd#0;class#TestTreeSet#0" expanded="false" />
+            <element signature="e#618#624#0" expanded="true" />
+            <element signature="method#testRemove#0;class#TestTreeSet#0" expanded="false" />
+            <element signature="e#1142#1148#0" expanded="true" />
+            <element signature="method#testContains#0;class#TestTreeSet#0" expanded="false" />
+            <element signature="e#1673#1679#0" expanded="true" />
+            <element signature="e#2204#2210#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Generics/Person.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
           <caret line="27" column="69" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -582,7 +743,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="425">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -590,7 +750,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="476">
           <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -598,7 +757,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="238">
           <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -606,7 +764,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="357">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -614,7 +771,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="867">
           <caret line="27" column="69" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -622,7 +778,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="425">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -630,7 +785,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="476">
           <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -638,7 +792,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="238">
           <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -646,7 +799,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="357">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -669,7 +821,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="408">
           <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -677,7 +828,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="323">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -685,7 +835,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="238">
           <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -693,7 +842,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="323">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -782,7 +930,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3523316" vertical-offset="0" max-vertical-offset="579">
           <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -790,7 +937,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1761658" vertical-offset="0" max-vertical-offset="579">
           <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -798,7 +944,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38169256" vertical-offset="0" max-vertical-offset="579">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -806,7 +951,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7633851" vertical-offset="0" max-vertical-offset="850">
           <caret line="27" column="69" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -814,85 +958,106 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7617925" vertical-offset="0" max-vertical-offset="425">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ua/GoIt/CollectionsTest/TestLinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31591174" vertical-offset="0" max-vertical-offset="1411">
-          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1468" max-vertical-offset="2329">
+          <caret line="189" column="0" selection-start-line="189" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
           <folding>
             <element signature="method#testAdd#0;class#TestLinkedList#0" expanded="false" />
+            <element signature="e#634#640#0" expanded="true" />
             <element signature="method#testGet#0;class#TestLinkedList#0" expanded="false" />
+            <element signature="e#1156#1162#0" expanded="true" />
             <element signature="method#testRemove#0;class#TestLinkedList#0" expanded="false" />
+            <element signature="e#1679#1685#0" expanded="true" />
             <element signature="method#testContains#0;class#TestLinkedList#0" expanded="false" />
-            <element signature="method#testPopulate#0;class#TestLinkedList#0" expanded="false" />
-            <element signature="e#2065#2074#0" expanded="true" />
-            <element signature="e#2506#2515#0" expanded="true" />
+            <element signature="e#2209#2215#0" expanded="true" />
+            <element signature="e#2740#2746#0" expanded="true" />
+            <element signature="e#3279#3285#0" expanded="true" />
+            <element signature="e#3879#3885#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/GoIt/CollectionsTest/CollectionsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="2941">
+          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ua/GoIt/CollectionsTest/TestArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22619048" vertical-offset="957" max-vertical-offset="1632">
-          <caret line="91" column="0" selection-start-line="88" selection-start-column="4" selection-end-line="111" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="363" max-vertical-offset="867">
+          <caret line="181" column="5" selection-start-line="120" selection-start-column="4" selection-end-line="181" selection-end-column="5" />
           <folding>
-            <element signature="e#166#175#0" expanded="true" />
             <element signature="method#testAdd#0;class#TestArrayList#0" expanded="false" />
+            <element signature="e#621#627#0" expanded="true" />
             <element signature="method#testGet#0;class#TestArrayList#0" expanded="false" />
-            <element signature="e#2059#2068#0" expanded="true" />
+            <element signature="e#1139#1145#0" expanded="true" />
+            <element signature="method#testRemove#0;class#TestArrayList#0" expanded="false" />
+            <element signature="e#1662#1668#0" expanded="true" />
+            <element signature="method#testContains#0;class#TestArrayList#0" expanded="false" />
+            <element signature="e#2192#2198#0" expanded="true" />
+            <element signature="method#testPopulate#0;class#TestArrayList#0" expanded="false" />
+            <element signature="e#2723#2729#0" expanded="true" />
             <element signature="method#testIteratorAdd#0;class#TestArrayList#0" expanded="false" />
-            <element signature="e#2500#2509#0" expanded="true" />
+            <element signature="e#3262#3268#0" expanded="true" />
             <element signature="method#testIteratorRemove#0;class#TestArrayList#0" expanded="false" />
+            <element signature="e#3862#3868#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/result/file.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="714">
-          <caret line="31" column="77" selection-start-line="31" selection-start-column="77" selection-end-line="31" selection-end-column="77" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ua/GoIt/CollectionsTest/TestHashSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="176" max-vertical-offset="1037">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="91" max-vertical-offset="595">
+          <caret line="91" column="0" selection-start-line="30" selection-start-column="3" selection-end-line="154" selection-end-column="0" />
           <folding>
+            <element signature="method#TestHashSet#0;class#TestHashSet#0" expanded="false" />
+            <element signature="method#testAdd#0;class#TestHashSet#0" expanded="false" />
+            <element signature="e#619#625#0" expanded="true" />
             <element signature="method#testRemove#0;class#TestHashSet#0" expanded="false" />
+            <element signature="e#1143#1149#0" expanded="true" />
             <element signature="method#testContains#0;class#TestHashSet#0" expanded="false" />
+            <element signature="e#1674#1680#0" expanded="true" />
             <element signature="method#testPopulate#0;class#TestHashSet#0" expanded="false" />
-            <element signature="e#1694#1703#0" expanded="true" />
+            <element signature="e#2205#2211#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ua/GoIt/CollectionsTest/TestTreeSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2006">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
+          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
           <folding>
-            <element signature="e#1694#1703#0" expanded="true" />
+            <element signature="method#testAdd#0;class#TestTreeSet#0" expanded="false" />
+            <element signature="e#618#624#0" expanded="true" />
+            <element signature="method#testRemove#0;class#TestTreeSet#0" expanded="false" />
+            <element signature="e#1142#1148#0" expanded="true" />
+            <element signature="method#testContains#0;class#TestTreeSet#0" expanded="false" />
+            <element signature="e#1673#1679#0" expanded="true" />
+            <element signature="e#2204#2210#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/GoIt/CollectionsTest/CollectionsTest.java">
+    <entry file="file://$PROJECT_DIR$/result/file.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1838" max-vertical-offset="2941">
-          <caret line="122" column="66" selection-start-line="122" selection-start-column="66" selection-end-line="122" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26984128" vertical-offset="0" max-vertical-offset="504">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.5976331" vertical-offset="223" max-vertical-offset="561">
+          <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
           <folding />
         </state>
       </provider>
