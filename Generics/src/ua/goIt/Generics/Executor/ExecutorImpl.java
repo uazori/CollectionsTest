@@ -1,12 +1,10 @@
 package ua.goIt.Generics.Executor;
 
-import ua.goIt.Generics.Exeptions.ExecuteWasCalledExeption;
+import ua.goIt.Generics.Exceptions.ExecuteWasCalledException;
 import ua.goIt.Generics.Task.Task;
-import ua.goIt.Generics.Validator.StringValidator;
 import ua.goIt.Generics.Validator.Validator;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 
@@ -24,7 +22,7 @@ public class ExecutorImpl<T> implements Executor {
 
 
     @Override
-    public void addTask(Task task) throws ExecuteWasCalledExeption{
+    public void addTask(Task task) throws ExecuteWasCalledException {
         tasks.add(task);
         validators.add(null);
 

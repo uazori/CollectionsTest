@@ -1,13 +1,11 @@
-import ua.goIt.Generics.Exeptions.ExecuteWasCalledExeption;
-import ua.goIt.Generics.Exeptions.NoExecuteCallExeption;
+import ua.goIt.Generics.Exceptions.ExecuteWasCalledException;
+import ua.goIt.Generics.Exceptions.NoExecuteCallException;
 import ua.goIt.Generics.Task.IntegerTask;
 import ua.goIt.Generics.Task.LongTask;
 import ua.goIt.Generics.Task.Task;
 import ua.goIt.Generics.Executor.Executor;
 import ua.goIt.Generics.Executor.ExecutorImpl;
-import ua.goIt.Generics.Task.StringTask;
 import ua.goIt.Generics.Validator.NumberValidator;
-import ua.goIt.Generics.Validator.Validator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,10 +15,7 @@ public class Main {
     public static void main(String[] args) {
 
         List< Task<Integer> > tasks = new ArrayList<  Task<Integer> >();
-        Task<Long> task = new LongTask(10L);
-        Task<Long> task1 = new LongTask(-9L);
-        Task<Integer> task2 = new IntegerTask(-110);
-
+       
         tasks.add(new IntegerTask(-110) );
         tasks.add( new IntegerTask(-220) );
         tasks.add( new IntegerTask(-330) );
@@ -37,8 +32,8 @@ public class Main {
 
             try {
                 numberExecutor.addTask(intTask);
-            } catch (ExecuteWasCalledExeption executeWasCalledExeption) {
-                executeWasCalledExeption.printStackTrace();
+            } catch (ExecuteWasCalledException executeWasCalledException) {
+                executeWasCalledException.printStackTrace();
             }
 
         }
@@ -52,8 +47,8 @@ public class Main {
             numberExecutor.addTask(new LongTask(-9L), new NumberValidator());
 
 
-        } catch (ExecuteWasCalledExeption executeWasCalledExeption) {
-            executeWasCalledExeption.printStackTrace();
+        } catch (ExecuteWasCalledException executeWasCalledException) {
+            executeWasCalledException.printStackTrace();
         }
 
         numberExecutor.execute();
@@ -62,8 +57,8 @@ public class Main {
         List<Number> validResults = new ArrayList<Number>();
         try {
             validResults = numberExecutor.getValidResults();
-        } catch (NoExecuteCallExeption noExecuteCallExeption) {
-            noExecuteCallExeption.printStackTrace();
+        } catch (NoExecuteCallException noExecuteCallException) {
+            noExecuteCallException.printStackTrace();
         }
 
 
@@ -75,8 +70,8 @@ public class Main {
         List<Number> inValidResults = new ArrayList<Number>();
         try {
             inValidResults = numberExecutor.getInvalidResults();
-        } catch (NoExecuteCallExeption noExecuteCallExeption) {
-            noExecuteCallExeption.printStackTrace();
+        } catch (NoExecuteCallException noExecuteCallException) {
+            noExecuteCallException.printStackTrace();
         }
         for (Number number : inValidResults) {
             System.out.println(number);

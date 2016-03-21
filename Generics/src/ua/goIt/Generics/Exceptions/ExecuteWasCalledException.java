@@ -1,9 +1,9 @@
-package ua.goIt.Generics.Exeptions;
+package ua.goIt.Generics.Exceptions;
 
 /**
  * Created by Vadim on 18.03.2016.
  */
-public class ExecuteWasCalledExeption extends Exception
+public class ExecuteWasCalledException extends Exception
 {
     @Override
     public String getMessage() {
