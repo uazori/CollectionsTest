@@ -13,7 +13,7 @@ import java.util.List;
  * Created by Vadim on 18.03.2016.
  */
 public class ExecutorImpl<T> implements Executor<T> {
-    List<Task<T>> tasks = new ArrayList<Task<T>>();
+    List<Task<? extends T>> tasks = new ArrayList<Task<? extends T>>();
     List<Validator> validators = new ArrayList<Validator>();
 
 
@@ -22,7 +22,7 @@ public class ExecutorImpl<T> implements Executor<T> {
 
 
     @Override
-    public void addTask(Task task) throws ExecuteWasCalledException {
+    public void addTask(Task<? extends T> task) throws ExecuteWasCalledException {
         tasks.add(task);
         validators.add(null);
 
@@ -31,7 +31,7 @@ public class ExecutorImpl<T> implements Executor<T> {
 
 
     @Override
-    public void addTask(Task task, Validator validator) throws ExecuteWasCalledException{
+    public void addTask(Task<? extends T> task, Validator<? super T> validator) throws ExecuteWasCalledException{
         tasks.add(task);
         validators.add(validator);
 
@@ -43,7 +43,7 @@ public class ExecutorImpl<T> implements Executor<T> {
 
 
         for (int i = 0; i < tasks.size(); i++) {
-            Task<T> task = tasks.get(i);
+            Task<? extends T> task = tasks.get(i);
             task.execute();
             Validator validator = validators.get(i);
             if (validator!=null) {
