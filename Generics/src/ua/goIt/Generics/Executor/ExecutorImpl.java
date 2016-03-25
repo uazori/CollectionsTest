@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Created by Vadim on 18.03.2016.
  */
-public class ExecutorImpl<T> implements Executor {
+public class ExecutorImpl<T> implements Executor<T> {
     List<Task<T>> tasks = new ArrayList<Task<T>>();
     List<Validator> validators = new ArrayList<Validator>();
 
@@ -31,7 +31,7 @@ public class ExecutorImpl<T> implements Executor {
 
 
     @Override
-    public void addTask(Task task, Validator validator) {
+    public void addTask(Task task, Validator validator) throws ExecuteWasCalledException{
         tasks.add(task);
         validators.add(validator);
 

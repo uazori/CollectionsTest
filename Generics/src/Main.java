@@ -15,7 +15,7 @@ public class Main {
     public static void main(String[] args) {
 
         List< Task<Integer> > tasks = new ArrayList<  Task<Integer> >();
-       
+
         tasks.add(new IntegerTask(-110) );
         tasks.add( new IntegerTask(-220) );
         tasks.add( new IntegerTask(-330) );

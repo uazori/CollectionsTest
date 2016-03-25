@@ -25,9 +25,9 @@ public interface Executor<T> {
     void execute();
 
     // Получить валидные результаты. Бросает Эксепшн если не был вызван метод execute()
-    List getValidResults() throws NoExecuteCallException;
+    <T> List<T> getValidResults() throws NoExecuteCallException;
 
     // Получить невалидные результаты. Бросает Эксепшн если не был вызван метод execute()
-    List getInvalidResults()throws NoExecuteCallException;
+     List<T> getInvalidResults()throws NoExecuteCallException;
 
 }
