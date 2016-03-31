@@ -5,51 +5,50 @@ package Semaphore;
  */
 public class SemaphoreImpl implements Semaphore {
 
+    private volatile int permits;
+    private int capacity;
+
+
     public SemaphoreImpl(int capacity) {
 
         this.capacity = capacity;
         permits = capacity;
-        lock = new Object();
+
     }
-
-    private int permits;
-    private int capacity;
-
-    public Object getLock() {
-        return lock;
-    }
-
-    private Object lock;
 
 
     @Override
-    public synchronized boolean acquire() {
+    public synchronized void acquire() throws InterruptedException {
 
 
         if (permits > 0) {
             permits--;
-            return true;
 
-        } else return false;
+
+        } else {
+            while (permits < 1) wait();
+        }
 
     }
 
     @Override
-    public synchronized boolean acquire(int permits) {
+    public synchronized void acquire(int permits) throws InterruptedException {
         if (this.permits >= permits) {
             this.permits -= permits;
-            return true;
 
-        } else return false;
+        } else {
+            while (this.permits < permits) wait();
+        }
     }
 
     @Override
     public synchronized void release() {
 
-        this.permits++;
-synchronized (lock){
-        lock.notify();
-}
+        if ((this.permits + 1) <= capacity) {
+            this.permits++;
+        }
+
+
     }
 
     @Override
@@ -59,15 +58,11 @@ synchronized (lock){
             this.permits += permits;
         } else this.permits = capacity;
 
-        synchronized (lock){
 
-        lock.notifyAll();
-
-        }
     }
 
     @Override
     public int getAvailablePermits() {
-        return capacity-permits;
+        return permits;
     }
 }

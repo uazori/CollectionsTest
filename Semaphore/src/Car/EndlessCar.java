@@ -3,36 +3,29 @@ package Car;
 import Semaphore.SemaphoreImpl;
 
 /**
- * Created by Vadim on 25.03.2016.
+ * Created by Vadim on 26.03.2016.
  */
-public class Car implements Runnable {
+public class EndlessCar implements Runnable{
     private SemaphoreImpl semaphore;
-    private int carCapacity;
 
-
-
-
-    public Car(SemaphoreImpl semaphore,int capacity) {
-
+    public EndlessCar(SemaphoreImpl semaphore) {
         this.semaphore = semaphore;
-        this.carCapacity= capacity;
-
     }
 
     @Override
     public void run() {
         try {
-            System.out.println(Thread.currentThread().getName() + " Waiting");
+            System.out.println(Thread.currentThread().getName() + "Waiting");
             semaphore.acquire();
 
             System.out.println(Thread.currentThread().getName() + " working ! ");
 
             synchronized (this) {
                 int summ=0;
-                for (int i = 0; i < carCapacity; i++) {
-                    summ += i;
+                while (summ<5){
+                    summ=1;
+                    summ += 1;
                 }
-
             }
 
             System.out.println(Thread.currentThread().getName() + " end !");
