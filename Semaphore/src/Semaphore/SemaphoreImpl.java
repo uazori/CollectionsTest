@@ -7,12 +7,15 @@ public class SemaphoreImpl implements Semaphore {
 
     private volatile int permits;
     private int capacity;
+    private Object lock;
+
 
 
     public SemaphoreImpl(int capacity) {
 
         this.capacity = capacity;
         permits = capacity;
+        lock = new Object();
 
     }
 
@@ -26,7 +29,7 @@ public class SemaphoreImpl implements Semaphore {
 
 
         } else {
-            while (permits < 1) wait();
+             synchronized (lock) {lock.wait();}
         }
 
     }
@@ -37,8 +40,9 @@ public class SemaphoreImpl implements Semaphore {
             this.permits -= permits;
 
         } else {
-            while (this.permits < permits) wait();
+            synchronized (lock) {lock.wait();}
         }
+
     }
 
     @Override
@@ -46,7 +50,9 @@ public class SemaphoreImpl implements Semaphore {
 
         if ((this.permits + 1) <= capacity) {
             this.permits++;
+            synchronized (lock) {lock.notify();}
         }
+
 
 
     }
@@ -56,7 +62,14 @@ public class SemaphoreImpl implements Semaphore {
 
         if ((this.permits + permits) <= capacity) {
             this.permits += permits;
-        } else this.permits = capacity;
+            synchronized (lock) {lock.notifyAll();}
+        } else {
+            if (this.permits < capacity){
+                this.permits = capacity;
+                synchronized (lock) {lock.notifyAll();}
+            }
+        }
+
 
 
     }

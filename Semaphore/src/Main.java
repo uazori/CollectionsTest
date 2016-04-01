@@ -16,13 +16,13 @@ public class Main {
 
 
 
-    test1();
-    test2();
+    test100Thread();
+
 
     }
 
-    public static void test1(){
-        System.out.println("Average test !!!");
+    public static void test100Thread(){
+        System.out.println("Hundred Thread Test ");
 
         SemaphoreImpl semaphore = new SemaphoreImpl(10);
 
@@ -30,11 +30,7 @@ public class Main {
             new Thread(new Car(semaphore,25000)).start();
         }
 
-
     }
 
-    public static void test2(){
 
-
-    }
 }
