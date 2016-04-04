@@ -1,6 +1,6 @@
 package SquareSum;
 
-import Threads.SquareCalculator;
+import Threads.SquareCalculatorCall;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -15,15 +15,50 @@ public class SquareSumImpl implements SquareSum {
     @Override
     public long getSquareSum(int[] values, int numberOfThreads) {
 
+        final Phaser phaser = new Phaser(numberOfThreads);
         ExecutorService executor = Executors.newFixedThreadPool(numberOfThreads);
-        Collection<Callable<Integer>> SquareThreads = new ArrayList<>();
+        Collection<Callable<Integer>> calculateSquareSummThreads = new ArrayList<>();
 
-        int result = 0;
+        long result = 0;
 
 
         if (numberOfThreads < 1) {
             numberOfThreads = 1;
         }
+
+
+        calculateSquareSummThreads = creteCallableArray(values,numberOfThreads,phaser);
+
+
+        try {
+            List<Future<Integer>> resultArray = executor.invokeAll(calculateSquareSummThreads);
+
+            for (Future<Integer> future : resultArray) {
+
+               result += future.get();
+
+            }
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }finally {
+            executor.shutdown();
+        }
+
+        System.out.println("registered:" + phaser.getRegisteredParties() +
+                            " unArrived:" + phaser.getUnarrivedParties()+
+                            " arrived:" + phaser.getArrivedParties()+
+                             " phase:" + phaser.getPhase());
+
+
+
+        return result;
+    }
+
+    public Collection<Callable<Integer>> creteCallableArray(int[] values,int numberOfThreads,Phaser phaser){
+        Collection<Callable<Integer>> CalculateSquareSummThreads = new ArrayList<>();
 
         int delta = values.length / numberOfThreads + 1;
 
@@ -41,33 +76,16 @@ public class SquareSumImpl implements SquareSum {
 
             System.out.println(Arrays.toString(arrayForThread));
 
-            Callable<Integer> CalculateSquareThread = new SquareCalculator(arrayForThread);
+            Callable<Integer> CalculateSquareThread = new SquareCalculatorCall(arrayForThread,phaser);
 
-            SquareThreads.add(CalculateSquareThread);
+            CalculateSquareSummThreads.add(CalculateSquareThread);
 
             start += delta;
 
         }
 
-
-
-
-        try {
-            List<Future<Integer>> resultArray = executor.invokeAll(SquareThreads);
-            for (Future<Integer> future : resultArray) {
-               result += future.get();
-            }
-
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        }
-
-
-        return result;
+        return CalculateSquareSummThreads;
     }
-
 
 
 }

@@ -6,18 +6,19 @@ public class Main {
 
     public static void main(String[] args) {
         Random random = new Random();
-        final int CAPACITY = 100;
-        int[] values = new int[CAPACITY];// = {1,2,3,4,5};
+        final int CAPACITY = 1000;
+        final int THREADS = 10;
+        int[] values = new int[CAPACITY];
 
         for (int i = 0; i < CAPACITY; i++) {
-            values[i] = i+1;
+            values[i] = random.nextInt(100);
         }
 
         SquareSumImpl squareSum = new SquareSumImpl();
 
 
 
-            System.out.println("result = " + squareSum.getSquareSum( values, 3) );
+            System.out.println("result = " + squareSum.getSquareSum( values, THREADS) );
 
 
 
