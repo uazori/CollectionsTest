@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<project name="Semaphore" basedir=".">
+    <description>
+        Running junit Test
+    </description>
+
+    <property name="src" location="src"/>
+    <property name="build.dir" location="build"/>
+    <property name="build.classes" location="${build.dir}/classes"/>
+
+    <property name="test.src" location="test"/>
+    <property name="test.build" location="test.build"/>
+    <property name="report.dir" location="${build.dir}/junitreport"/>
+    <property name="lib" location="lib"/>
+
+
+    <path id="classpath">
+        <fileset dir="${lib}" includes="**/*.jar"/>
+    </path>
+
+    <path id="application" location="${jar.dir}/${ant.project.name}.jar"/>
+
+
+    <path id="junit.class.path">
+        <fileset dir="lib" includes="*.jar"/>
+        <pathelement location="build/classes"/>
+
+    </path>
+
+    <target name="init" depends="clean">
+
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${build.classes}"/>
+        <mkdir dir="${test.build}"/>
+        <mkdir dir="${dist}"/>
+        <mkdir dir="${report.dir}"/>
+
+    </target>
+
+
+    <target name="compile" depends="init">
+
+
+        <javac srcdir="${src}" destdir="${build.classes}" source="1.8" target="1.8" includeantruntime="false"
+               classpathref="classpath"/>
+
+
+    </target>
+
+
+
+
+
+
+
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+
+    <target name="jar" depends="compile">
+        <mkdir dir="build/jar"/>
+        <jar destfile="build/jar/Semaphore.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="Main"/>
+            </manifest>
+        </jar>
+    </target>
+
+
+
+
+
+    <target name="junit" depends="jar">
+
+        <junit printsummary="yes">
+            <classpath>
+                <path refid="classpath"/>
+                <path refid="application"/>
+                <path refid="junit.class.path"/>
+
+            </classpath>
+
+            <formatter type="xml"/>
+
+            <batchtest fork="yes" todir="${report.dir}">
+
+                <fileset dir="${build.classes}">
+                    <include name="*Test.class"/>
+                </fileset>
+
+            </batchtest>
+        </junit>
+    </target>
+
+
+    <target name="run">
+        <java jar="build/jar/Semaphore.jar" fork="true"/>
+    </target>
+
+</project>

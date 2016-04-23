@@ -1,0 +1,70 @@
+xmlns:ivy="antlib:org.apache.ivy.ant"
+
+
+<target name="resolve" description="retrieve dependencies with ivy">
+
+        <echo message="Getting dependencies..."/>
+
+        <ivy:retrieve/>
+
+        <ivy:cachepath pathid="compile.path" conf="compile"/>
+        <ivy:cachepath pathid="runtime.path" conf="runtime"/>
+        <ivy:cachepath pathid="test.path" conf="test"/>
+
+    </target>
+
+
+     <junit>
+            <test name="SemaphoreImplTest"/>
+        </junit>
+
+
+
+
+
+<target name="build-source" depends="prepare" description="compile the source ">
+        <javac srcdir="${src}" destdir="${build}">
+            <classpath refid="_classpath"/>
+        </javac>
+    </target>
+
+    <target name="test" depends="build-source">
+        <javac srcdir="${test}" destdir="${build}">
+            <classpath refid="_classpath"/>
+        </javac>
+    </target>
+
+
+
+    <junit printsummary="yes" haltonfailure="yes">
+
+            <classpath>
+
+                <fileset dir="${lib}/JUnit4/junit-4.11.jar">
+                    <include name="**/junit-4.11.jar"/>
+                </fileset>
+
+            </classpath>
+
+        </junit>
+
+        classpathref="classpath"classpathref="classpath"
+
+          <target name="unitTest">
+                <junit haltonfailure="true" printsummary="true">
+                    <test name="SemaphoreImplTest"/>
+                </junit>
+            </target>
+
+
+            <!-- ivy start -->
+
+            <target name="compile.test" depends="compile">
+                    <javac srcdir="${test.src}" destdir="${test.build}" source="1.8" target="1.8">
+                        <classpath>
+                            <pathelement location="${build}"/>
+                            <path refid="test.classpath"/>
+                        </classpath>
+                    </javac>
+
+                </target>
