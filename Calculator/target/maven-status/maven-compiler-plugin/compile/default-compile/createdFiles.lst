@@ -1,4 +1,3 @@
-ua\goit\java\taskProvider\TaskProvider.class
-ua\goit\java\helloworld\HelloWorld.class
+ua\goit\java\dataType\DoubleType.class
+ua\goit\java\operators\AddDoubleOperator.class
 ua\goit\java\bootstrap\Bootstrap.class
-ua\goit\java\taskProvider\IntegerTaskProvider.class

@@ -6,18 +6,16 @@
 
 
     <bean id="bootstrap" class="ua.goit.java.bootstrap.Bootstrap">
-        <property name="taskProvider" ref="taskProvider"/>
-        <property name="executorFactory" ref="executorFactory"/>
+
     </bean>
 
-    <bean id="taskProvider" class="ua.goit.java.taskProvider.IntegerTaskProvider" init-method="init"/>
 
-    <bean id="SerialExecutor" class="ua.goit.java.executor.SerialExecutor"/>
+    <bean id="Calculator" class="ua.goit.calculator.Calculator">
 
-    <bean id="executorFactory" class="ua.goit.java.ExecutorFactory.ExecutorFactory">
-
-        <lookup-method name="getIntegerExecutor" bean="SerialExecutor"/>
     </bean>
-    <bean id="Calculator" class="ua.goit.calculator.Calculator"/>
 
+
+    <bean id="doubleType" class="ua.goit.java.dataType.DoubleType"/>
+
+    <bean id="operator" class="ua.goit.java.operators.AddDoubleOperator"/>
 </beans>

@@ -5,22 +5,18 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import ua.goit.calculator.Calculator;
-import ua.goit.java.ExecutorFactory.ExecutorFactory;
-import ua.goit.java.taskProvider.TaskProvider;
+import ua.goit.calculator.dataTypes.DataType;
+import ua.goit.calculator.operators.Operator;
 
-import ua.goit.java.executor.Executor;
+import java.util.Scanner;
+
 
 /**
  * Created by Vadim on 21.04.2016.
  */
 public class Bootstrap {
 
-    private TaskProvider taskProvider;
-    private ExecutorFactory executorFactory;
-
-
-
-
+   static Calculator calculator;
 
 
 
@@ -29,32 +25,57 @@ public class Bootstrap {
 
         Bootstrap bootstrap = (Bootstrap) aplicationContext.getBean("bootstrap");
         Calculator calculator = (Calculator) aplicationContext.getBean("Calculator");
-        bootstrap.execute();
-        String result = calculator.calculate("3 + 5");
+
+        String result = calculator.calculate("f 1 + 5");
         System.out.println("result = " + result);
 
 
+
+        System.out.println("Please enter string with task (example:f 1 + 2) or quit for exit: ");
+
+        Scanner scanIn = new Scanner(System.in);
+
+        while (true){
+
+            System.out.println("enter new task: ");
+
+            String taskString = scanIn.nextLine();
+
+            if (taskString.equals("quit")){break;}
+
+            result = calculator.calculate(taskString);
+
+            System.out.println(taskString +" = "+ result);
+        }
+
+
+
+
+        scanIn.close();
+
+
+
     }
-    public void execute() {
-        Executor<Integer> executor = executorFactory.getIntegerExecutor();
-        System.out.println("Say hello ");
-        taskProvider.getAllTasks().forEach(executor::addTask);
-        executor.execute();
-        executor.execute();
+
+
+public void run(){
+
+
+
+
+
+}
+
+
+    public void setDataType(DataType dataType) {
+
+        this.calculator.addType("double",dataType);
+
     }
 
 
-
-
-    public void setExecutorFactory(ExecutorFactory executorFactory) {
-
-        this.executorFactory = executorFactory;
-
-    }
-
-
-    public void setTaskProvider(TaskProvider taskProvider) {
-        this.taskProvider = taskProvider;
+    public void setDataTypeOperator( Operator operator) {
+        this.calculator.addOperator("double","+",operator);
     }
 
 

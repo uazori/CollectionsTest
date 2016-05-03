@@ -6,16 +6,16 @@
 
 
     <bean id="bootstrap" class="ua.goit.java.bootstrap.Bootstrap">
-        <property name="taskProvider" ref="taskProvider"/>
-        <property name="executorFactory" ref="executorFactory"/>
+
     </bean>
 
 
-    <bean id="Calculator" class="ua.goit.calculator.Calculator"/>
+    <bean id="Calculator" class="ua.goit.calculator.Calculator">
+
+    </bean>
 
 
-    <bean id="doubleType" class="ua.goit.java.dataType.DoubleType"
-            />
+    <bean id="doubleType" class="ua.goit.java.dataType.DoubleType"/>
 
     <bean id="operator" class="ua.goit.java.operators.AddDoubleOperator"/>
 </beans>

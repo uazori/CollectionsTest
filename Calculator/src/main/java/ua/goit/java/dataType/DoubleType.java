@@ -3,6 +3,8 @@ package ua.goit.java.dataType;
 import ua.goit.calculator.dataTypes.DataType;
 import ua.goit.calculator.operators.Operator;
 import ua.goit.calculator.task.CalculatorTask;
+import ua.goit.calculator.validator.DataValidator;
+import ua.goit.calculator.validator.InputValidator;
 
 import java.util.HashMap;
 
@@ -12,6 +14,7 @@ import java.util.HashMap;
 public class DoubleType implements DataType {
 
     HashMap<String, Operator> typeOperators = new HashMap<String, Operator>();
+
 
     @Override
     public String execute(CalculatorTask task) {
@@ -23,4 +26,6 @@ public class DoubleType implements DataType {
     public void addOperator(String operatorSign, Operator operator) {
         typeOperators.put(operatorSign, operator);
     }
+
+
 }
