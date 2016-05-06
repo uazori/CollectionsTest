@@ -11,7 +11,7 @@ import java.util.HashMap;
 /**
  * Created by Vadim on 27.04.2016.
  */
-public class DoubleType implements DataType {
+public class DateType implements DataType {
 
     HashMap<String, Operator> typeOperators = new HashMap<String, Operator>();
 

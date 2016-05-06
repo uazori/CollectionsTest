@@ -6,16 +6,11 @@
 
 
     <bean id="bootstrap" class="ua.goit.java.bootstrap.Bootstrap">
+        <property name="calculator" ref="Calculator"/>
 
     </bean>
 
 
-    <bean id="Calculator" class="ua.goit.calculator.Calculator">
+    <bean id="Calculator" class="ua.goit.calculator.Calculator" scope="prototype"/>
 
-    </bean>
-
-
-    <bean id="doubleType" class="ua.goit.java.dataType.DoubleType"/>
-
-    <bean id="operator" class="ua.goit.java.operators.AddDoubleOperator"/>
 </beans>
