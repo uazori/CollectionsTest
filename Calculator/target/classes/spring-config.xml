@@ -6,11 +6,63 @@
 
 
     <bean id="bootstrap" class="ua.goit.java.bootstrap.Bootstrap">
-        <property name="calculator" ref="Calculator"/>
+        <property name="calculator" ref="calculator"/>
 
     </bean>
 
 
-    <bean id="Calculator" class="ua.goit.calculator.Calculator" scope="prototype"/>
+    <bean id="calculator" class="ua.goit.calculator.Calculator" scope="prototype"/>
+
+    <bean id="dateType" class="ua.goit.java.dataType.DateType" scope="prototype"/>
+
+    <bean id="addDateOperator" class="ua.goit.java.operators.AddDateOperator" scope="prototype"/>
+
+
+    <bean id="DateAdd" class="org.springframework.beans.factory.config.MethodInvokingBean">
+        <property name="targetObject" ref="bootstrap"/>
+        <property name="targetMethod" value="setDataType"/>
+        <property name="arguments">
+            <list>
+                <ref bean="dateType" />
+            </list>
+        </property>
+    </bean>
+
+    <bean id="addition" class="org.springframework.beans.factory.config.MethodInvokingBean">
+        <property name="targetObject" ref="bootstrap"/>
+        <property name="targetMethod" value="setDataTypeOperator"/>
+        <property name="arguments">
+            <list>
+                <ref bean="addDateOperator" />
+            </list>
+        </property>
+    </bean>
+
+
+   <!-- <bean id="DateAdd" class="org.springframework.beans.factory.config.MethodInvokingBean">
+        <property name="targetObject" ref="dateType"/>
+        <property name="targetMethod" value="addOperator"/>
+        <property name="arguments">
+            <list>
+                <value>+</value>
+                <ref bean="addDateOperator" />
+            </list>
+        </property>
+    </bean>
+
+    <bean id="addition" class="org.springframework.beans.factory.config.MethodInvokingBean">
+        <property name="targetObject" ref="calculator"/>
+        <property name="targetMethod" value="addType"/>
+        <property name="arguments">
+            <list>
+                <value>date</value>
+                <ref bean="dateType" />
+            </list>
+        </property>
+    </bean>
+
+-->
+
+
 
 </beans>

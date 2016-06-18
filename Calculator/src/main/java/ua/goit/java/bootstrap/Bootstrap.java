@@ -38,9 +38,10 @@ public class Bootstrap {
 
         Scanner scanIn = new Scanner(System.in);
         String result;
-        DateType dateType = new DateType();
-        dateType.addOperator("+", new AddDateOperator());
-        calculator.addType("date", dateType);
+       // DateType dateType = new DateType();
+       // dateType.addOperator("+", new AddDateOperator());
+       // calculator.addType("date", dateType);
+
 
         System.out.println("Please enter string with task (example:f 1 + 2) or quit for exit: ");
         while (true) {
